@@ -1,0 +1,39 @@
+main {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+    "header header  header  header  header header"
+    "aside  section section section section section"
+    "footer footer  footer  footer  footer footer";
+    row-gap: 0;
+    column-gap: 0;
+    grid-template-rows: 10% 1fr 5%;
+    height: 98vh;
+    min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background: #f9daab;
+}
+
+aside{
+
+    grid-area: aside;
+    background: #fdefdb;
+}
+
+section {
+    padding: 10px;
+    grid-area: section;
+    background: #fdefdb;
+}
+
+
+
+footer {
+    margin: 0;
+    text-align: center;
+    grid-area: footer;
+}

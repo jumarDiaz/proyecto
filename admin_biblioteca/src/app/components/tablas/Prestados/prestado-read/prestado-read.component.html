@@ -1,0 +1,32 @@
+<p-table [value]="prestados">
+    <ng-template pTemplate="caption">Prestados</ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th>ID</th>
+            <th>NombreCliente</th>
+            <th>DireccionCliente</th>
+            <th>TelefonoCliente</th>
+            <th>fechaPrestamo</th>
+            <th>fechaDevolucion</th>
+            <th>Editar</th>
+
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-prestados>
+        <tr>
+            <td>{{prestados.id}}</td>
+            <td>{{prestados.usuario.nombre}}</td>
+            <td>{{prestados.usuario.direccion}}</td>
+            <td>{{prestados.usuario.telefono}}</td>
+            <td>{{prestados.fecha_dev}}</td>
+            <td>{{prestados.fecha_pres}}</td>
+            <td><a pButton
+                pRipple
+                icon="pi pi-pencil"
+                class="by-cyan-600 mr-1"
+                [routerLink]="['edit/',prestados.id]">
+            </a>
+        </td>
+        </tr>
+    </ng-template>
+</p-table>

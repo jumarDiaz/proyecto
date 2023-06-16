@@ -1,0 +1,21 @@
+<p-table [value]="libros">
+    <ng-template pTemplate="caption"> Libros</ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th>ID</th>
+            <th>titulo</th>
+            <th>numero_paguina</th>
+            <th>editorial</th>
+            <th>ISBN</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-libros>
+        <tr>
+            <td>{{libros.id}}</td>
+            <td>{{libros.titulo}}</td>
+            <td>{{libros.numero_pagina}}</td>
+            <td>{{libros.editorial}}</td>
+            <td>{{libros.ISBN}}</td>
+        </tr>
+    </ng-template>
+</p-table>

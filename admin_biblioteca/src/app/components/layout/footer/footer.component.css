@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poltawski+Nowy:ital,wght@1,600&display=swap');
+
+*{
+    margin: 0px;
+    padding: 10px;
+    font-family: 'Poltawski Nowy', serif;
+    background: #fdf4e7;
+
+}

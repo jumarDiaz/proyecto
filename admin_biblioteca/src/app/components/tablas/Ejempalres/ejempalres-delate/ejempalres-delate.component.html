@@ -1,0 +1,32 @@
+<div>
+    <p-toast></p-toast>
+</div>
+<p-table [value]="ejemplares">
+    <ng-template pTemplate="caption"> Usuarios</ng-template>
+    <ng-template pTemplate="header">
+        <tr>
+            <th>ID</th>
+            <th>localizacion</th>
+            <th>nombreLibro</th>
+            <th>Eliminar</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-ejemplares>
+        <tr>
+            <td>{{ejemplares.id}}</td>
+            <td>{{ejemplares.localizacion}}</td>
+            <td>{{ejemplares.libro.titulo}}</td>
+            <td>
+
+                <button 
+                type="button"
+                 pButton 
+                 pRipple
+                 icon="pi pi-eraser"
+                 class="bg-cyan-600  mr-1"
+                 (click)="eliminar(ejemplares.id)">
+                </button>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
